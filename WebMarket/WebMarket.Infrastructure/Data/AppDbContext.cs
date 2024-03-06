@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WebMarket.Entities;
+using WebMarket.Entities.Dictionaries;
 
 namespace WebMarket.Data;
 
@@ -16,4 +17,5 @@ public class AppDbContext : DbContext
     public DbSet<ProductInBasket> ProductInBaskets { get; set; }
     public DbSet<Role> Roles { get; set; }
     public DbSet<User> Users { get; set; }
+    public DbSet<DictCategory> DictCategories { get; set; }
 }
