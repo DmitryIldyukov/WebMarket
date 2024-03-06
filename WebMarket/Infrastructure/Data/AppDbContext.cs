@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using WebMarket.Entities;
 
 namespace WebMarket.Data;
 
@@ -8,4 +9,11 @@ public class AppDbContext : DbContext
     {
         Database.EnsureCreated();
     }  
+    
+    public DbSet<Basket> Baskets { get; set; }
+    public DbSet<Feedback> Feedbacks { get; set; }
+    public DbSet<Product> Products { get; set; }
+    public DbSet<ProductInBasket> ProductInBaskets { get; set; }
+    public DbSet<Role> Roles { get; set; }
+    public DbSet<User> Users { get; set; }
 }
